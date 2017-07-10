@@ -27,7 +27,10 @@ func calcPalin(maxfactor int) {
 			break
 		}
 		for b := a; b > 0; b-- {
-			if (a*b) > maxpalin && isPalin(a*b) { //which order is best?
+			if (a * b) < maxpalin {
+				break
+			}
+			if isPalin(a * b) {
 				maxpalin = a * b
 			}
 		}
