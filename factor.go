@@ -20,7 +20,7 @@ func main() {
 	maxfactor := uint(math.Pow(10, float64(maxlen))) - 1
 
 	for a := maxfactor; a > 0; a-- {
-		for b := maxfactor; b > 0; b-- {
+		for b := a; b > 0; b-- {
 			if isPalin(a * b) {
 				fmt.Println(a * b)
 				os.Exit(0)
