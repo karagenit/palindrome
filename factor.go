@@ -15,7 +15,6 @@ func isPalin(num int) bool {
 			return false
 		}
 	}
-
 	return true
 }
 
@@ -36,8 +35,7 @@ func calcPalin(maxfactor int) {
 		}
 	}
 
-	fmt.Print("Largest: ")
-	fmt.Println(maxpalin)
+	fmt.Printf("Largest: %d\n", maxpalin)
 }
 
 func main() {
@@ -50,12 +48,10 @@ func main() {
 	}
 
 	maxfactor := int(math.Pow(10, float64(maxlen))) - 1
-
 	start := time.Now().UnixNano()
 
 	calcPalin(maxfactor)
 
 	time := time.Now().UnixNano() - start
-
 	fmt.Printf("Time: %.2fs\n", float64(time)/1000000000.0)
 }
