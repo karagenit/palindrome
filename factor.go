@@ -4,13 +4,14 @@ import "fmt"
 import "os"
 import "math"
 import "strconv"
+import "time"
 
 func isPalin(num int) bool {
 	str := strconv.Itoa(num)
 	len := len(str)
 
 	for i := 0; i < len; i++ {
-		if str[i] != str[len-i-1] {
+		if str[i] != str[len-i-1] { //TODO don't compare all
 			return false
 		}
 	}
@@ -47,5 +48,11 @@ func main() {
 
 	maxfactor := int(math.Pow(10, float64(maxlen))) - 1
 
+	start := time.Now().UnixNano()
+
 	calcPalin(maxfactor)
+
+	time := time.Now().UnixNano() - start
+
+	fmt.Printf("Time: %.2fs\n", float64(time)/1000000000.0)
 }
