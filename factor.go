@@ -32,9 +32,7 @@ func main() {
 
 	for a := maxfactor; a > 0; a-- {
 		if (a * a) < maxpalin {
-			fmt.Println("Ye")
-			fmt.Println(maxpalin)
-			os.Exit(0)
+			break
 		}
 		for b := a; b > 0; b-- {
 			if (a*b) > maxpalin && isPalin(a*b) { //which order is best?
@@ -46,4 +44,7 @@ func main() {
 		//test
 		fmt.Println("---")
 	}
+
+	fmt.Print("Largest: ")
+	fmt.Println(maxpalin)
 }
