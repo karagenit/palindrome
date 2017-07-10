@@ -38,11 +38,7 @@ func main() {
 			if (a*b) > maxpalin && isPalin(a*b) { //which order is best?
 				maxpalin = a * b
 			}
-			//test
-			fmt.Println(a * b)
 		}
-		//test
-		fmt.Println("---")
 	}
 
 	fmt.Print("Largest: ")
