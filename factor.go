@@ -10,8 +10,8 @@ func isPalin(num int) bool {
 	str := strconv.Itoa(num)
 	len := len(str)
 
-	for i := 0; i < len; i++ {
-		if str[i] != str[len-i-1] { //TODO don't compare all
+	for i := 0; i < len/2; i++ {
+		if str[i] != str[len-i-1] {
 			return false
 		}
 	}
