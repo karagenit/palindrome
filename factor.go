@@ -18,16 +18,7 @@ func isPalin(num int) bool {
 	return true
 }
 
-func main() {
-	var maxlen int
-	_, err := fmt.Scanf("%d", &maxlen)
-
-	if err != nil {
-		fmt.Println("Bad Input!")
-		os.Exit(1)
-	}
-
-	maxfactor := int(math.Pow(10, float64(maxlen))) - 1
+func calcPalin(maxfactor int) {
 	maxpalin := 0
 
 	for a := maxfactor; a > 0; a-- {
@@ -43,4 +34,18 @@ func main() {
 
 	fmt.Print("Largest: ")
 	fmt.Println(maxpalin)
+}
+
+func main() {
+	var maxlen int
+	_, err := fmt.Scanf("%d", &maxlen)
+
+	if err != nil {
+		fmt.Println("Bad Input!")
+		os.Exit(1)
+	}
+
+	maxfactor := int(math.Pow(10, float64(maxlen))) - 1
+
+	calcPalin(maxfactor)
 }
